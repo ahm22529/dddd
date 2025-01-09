@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "36150152415",
+    "project_id": "test-bb802",
+    "storage_bucket": "test-bb802.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36150152415:android:8ce743ea87b9a69588ad6a",
+        "android_client_info": {
+          "package_name": "com.exampel.e_coomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36150152415-plkl4ta8t5mnv2llq3hsivdggjl12dt8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCXtMAYH9Pno9MxzF0yi_MlJN7KDINfw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36150152415-plkl4ta8t5mnv2llq3hsivdggjl12dt8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "36150152415-hpt4u50g315bi5d4hb46tbq59ja7o2hk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.eCoomer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
