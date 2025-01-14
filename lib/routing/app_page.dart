@@ -1,7 +1,6 @@
 import 'package:e_coomer/fetures/auth/view/screen/login_screen.dart';
 import 'package:e_coomer/fetures/auth/view/screen/sing_up_screen.dart';
-import 'package:e_coomer/fetures/details/presentation/view/screen/deails_screen.dart';
-import 'package:e_coomer/fetures/metrics/presentation/view/screen/metrics_screen.dart';
+
 import 'package:e_coomer/fetures/onbording/view/screen/onbording_screen.dart';
 import 'package:e_coomer/fetures/splash/presention/view/screen/splash_screen.dart';
 import 'package:e_coomer/routing/app_routes.dart';
@@ -51,14 +50,14 @@ appPages() => [
         //  binding: AddPofaBinding(),
         page: () => const SingUpScreen(),
       ),
-      GetPage(
-        name: Routes.metricsScreen,
-        //  binding: AddPofaBinding(),
-        page: () => const MetricsScreen(),
-      ),
-      GetPage(
-        name: Routes.detailsScreen,
-        //  binding: AddPofaBinding(),
-        page: () => const DetailsScreen(),
-      ),
+      // GetPage(
+      //   name: Routes.metricsScreen,
+      //   //  binding: AddPofaBinding(),
+      //   page: () => const MetricsScreen(),
+      // ),
+      // GetPage(
+      //   name: Routes.detailsScreen,
+      //   //  binding: AddPofaBinding(),
+      //   page: () => const DetailsScreen(),
+      // ),
     ];
