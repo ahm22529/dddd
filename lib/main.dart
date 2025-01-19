@@ -2,7 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:e_coomer/core/localization/language_localization.dart';
 import 'package:e_coomer/core/services/cash.dart/cash_hepler.dart';
 import 'package:e_coomer/core/services/cash.dart/cash_keys.dart';
-import 'package:e_coomer/fetures/metrics/presentation/logic/loaddata/loaddata_cubit.dart';
+import 'package:e_coomer/core/services/custom_bloc_observed/custom_bloc_observed.dart';
 import 'package:e_coomer/firebase_options.dart';
 import 'package:e_coomer/routing/app_page.dart';
 import 'package:e_coomer/routing/app_routes.dart';
@@ -17,6 +17,7 @@ import 'package:get/get.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await CashHelper.init();
+  Bloc.observer = CustomBlocObserver();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -56,31 +57,22 @@ class EcommerApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return BlocProvider(
-          create: (context) {
-            final cubit = LoaddataCubit();
-            cubit.loadDataFromJson();
-            cubit.calculatePercentages();
-            // استدعاء الدالة هنا
-            return cubit;
-          },
-          child: GetMaterialApp(
-            debugShowCheckedModeBanner: false,
-            title: 'baseproject',
-            theme: ThemeData(
-              bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-                  backgroundColor: Colors.white),
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-              appBarTheme: AppBarTheme(
-                  surfaceTintColor: Colors.transparent, toolbarHeight: 50.h),
-              useMaterial3: true,
-              fontFamily: 'Cairo',
-            ),
-            locale: const Locale('en'),
-            translations: LanguageLocalization(),
-            initialRoute: Routes.splashScreen,
-            getPages: appPages(),
+        return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'baseproject',
+          theme: ThemeData(
+            bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+                backgroundColor: Colors.white),
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+            appBarTheme: AppBarTheme(
+                surfaceTintColor: Colors.transparent, toolbarHeight: 50.h),
+            useMaterial3: true,
+            fontFamily: 'Cairo',
           ),
+          locale: const Locale('ar'),
+          translations: LanguageLocalization(),
+          initialRoute: Routes.splashScreen,
+          getPages: appPages(),
         );
       },
     );

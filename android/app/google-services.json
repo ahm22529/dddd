@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:36150152415:android:8ce743ea87b9a69588ad6a",
         "android_client_info": {
-          "package_name": "com.exampel.e_coomer"
+          "package_name": "com.example.e_coomer"
         }
       },
       "oauth_client": [
@@ -34,7 +34,7 @@
               "client_id": "36150152415-hpt4u50g315bi5d4hb46tbq59ja7o2hk.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.eCoomer"
+                "bundle_id": "com.example.e_coomer"
               }
             }
           ]
