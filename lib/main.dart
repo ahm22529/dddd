@@ -13,8 +13,14 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
+  await Supabase.initialize(
+    url: 'https://trawfyggsuezpnizrmmp.supabase.co',
+    anonKey:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRyYXdmeWdnc3VlenBuaXpybW1wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzczNzA5NjUsImV4cCI6MjA1Mjk0Njk2NX0.PyV1lCq3qoEEJswjpL4dEN9NIbwYFiDwW0cE2LLKtQs',
+  );
   WidgetsFlutterBinding.ensureInitialized();
   await CashHelper.init();
   Bloc.observer = CustomBlocObserver();
