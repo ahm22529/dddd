@@ -1,5 +1,6 @@
 import 'package:e_coomer/fetures/auth/view/screen/login_screen.dart';
 import 'package:e_coomer/fetures/auth/view/screen/sing_up_screen.dart';
+import 'package:e_coomer/fetures/home/view/screen/home_screen.dart';
 
 import 'package:e_coomer/fetures/onbording/view/screen/onbording_screen.dart';
 import 'package:e_coomer/fetures/splash/presention/view/screen/splash_screen.dart';
@@ -49,6 +50,12 @@ appPages() => [
         name: Routes.registerScreen,
         //  binding: AddPofaBinding(),
         page: () => const SingUpScreen(),
+      ),
+      GetPage(
+        transition: Transition.zoom,
+        name: Routes.homeScreen,
+        //  binding: AddPofaBinding(),
+        page: () => const HomeScreen(),
       ),
       // GetPage(
       //   name: Routes.metricsScreen,

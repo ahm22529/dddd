@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cached_network_image: ^3.4.1
+  carousel_slider: ^5.0.0
   cupertino_icons: ^1.0.8
   dartz: ^0.10.1
   device_preview: ^1.2.0
@@ -46,6 +47,8 @@ dependencies:
   google_sign_in: ^6.2.2
   intl_phone_field: ^3.2.0
   shared_preferences: ^2.3.5
+  smooth_page_indicator: ^1.2.0+3
+  supabase_flutter: ^2.8.3
 
 dev_dependencies:
   flutter_lints: ^4.0.0

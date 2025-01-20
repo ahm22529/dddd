@@ -41,7 +41,7 @@ class AppImages {
 
   /// Assets for imagesFilter
   /// assets/images/filter.svg
-  static const String imagesFilter = "assets/images/filter.svg";
+  static const String imagesFilter = "assets/images/setting-4.svg";
 
   /// Assets for imagesFilter2
   /// assets/images/filter2.svg
@@ -93,7 +93,7 @@ class AppImages {
 
   /// Assets for imagesSearchIcon
   /// assets/images/search_icon.svg
-  static const String imagesSearchIcon = "assets/images/search_icon.svg";
+  static const String imagesSearchIcon = "assets/images/search-normal.svg";
 
   /// Assets for imagesSplashBottom
   /// assets/images/splash_bottom.svg

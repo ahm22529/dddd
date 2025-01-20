@@ -50,7 +50,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         var isLoggedIn = CashHelper.getData(CacheKeys.isLogin);
 
         if (isLoggedIn) {
-          Get.offAllNamed(Routes.metricsScreen);
+          Get.offAllNamed(Routes.homeScreen);
         } else {
           Get.offAllNamed(Routes.loginScreen);
         }

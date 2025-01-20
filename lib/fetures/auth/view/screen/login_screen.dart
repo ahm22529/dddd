@@ -97,7 +97,9 @@ class LoginScreen extends StatelessWidget {
                           )
                         : const SizedBox(),
                     SocialLoginButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        authCubit.singinWithFaceBook();
+                      },
                       image: AppImages.imagesFacebookIcon,
                       title: 'Login with Facebook',
                     ),

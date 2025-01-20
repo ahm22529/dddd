@@ -1,3 +1,5 @@
+import 'package:e_coomer/fetures/home/view/screen/home_screen.dart';
+
 class Routes {
   static const String splashScreen = '/splash-screen';
   static const String onboardingScreen = '/onboarding-screen';
@@ -6,5 +8,5 @@ class Routes {
   static const metricsScreen = "/metricsScreen";
 
   static const detailsScreen = "/detailsScreen";
-
+  static const homeScreen = "/homeScreen";
 }

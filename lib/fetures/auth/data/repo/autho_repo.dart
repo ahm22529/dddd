@@ -9,6 +9,7 @@ abstract class AuthoRepo {
       {required String email, required String password});
 
   Future<Either<Failure, User>> loginWithGoogle();
+   Future<Either<Failure, UserCredential>> loginWithFacebook();
   Future<Either<Failure, User>> createUserWithEmailAndPassword(
       {required String email, required String password});
 }
@@ -47,6 +48,19 @@ class AuthoRepoImp extends AuthoRepo {
     try {
       return right(await fireBaseAutServices.createUserWithEmailAndPassword(
           email: email, password: password));
+    } on CustomExpection catch (e) {
+      return left(ServerFailure(e.toString()));
+    } catch (e) {
+      return left(
+        const ServerFailure("please try later"),
+      );
+    }
+  }
+  
+  @override
+  Future<Either<Failure, UserCredential>> loginWithFacebook() async{
+ try {
+      return right(await fireBaseAutServices.signInWithFacebook());
     } on CustomExpection catch (e) {
       return left(ServerFailure(e.toString()));
     } catch (e) {

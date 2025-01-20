@@ -30,7 +30,7 @@ class AuthCubit extends Cubit<AuthState> {
       emit(AuthSucess());
       ToastManager.showSuccess("تم تسجيل الدخول بنجاح", true);
       CashHelper.setData(CacheKeys.isLogin, true);
-      Get.offAllNamed(Routes.metricsScreen);
+      Get.offAllNamed(Routes.homeScreen);
     });
   }
 
@@ -38,6 +38,20 @@ class AuthCubit extends Cubit<AuthState> {
     emit(Authloading());
     startLoading();
     var res = await authoRepo.loginWithGoogle();
+    stopLoading();
+    res.fold((fauiler) {
+      emit(AuthFauiler(message: fauiler.message));
+      ToastManager.showError(fauiler.message);
+    }, (user) {
+      emit(AuthSucess());
+      ToastManager.showSuccess("تم تسجيل الدخول بنجاح", true);
+    });
+  }
+
+  void singinWithFaceBook() async {
+    emit(Authloading());
+    startLoading();
+    var res = await authoRepo.loginWithFacebook();
     stopLoading();
     res.fold((fauiler) {
       emit(AuthFauiler(message: fauiler.message));
